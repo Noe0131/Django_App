@@ -7,7 +7,6 @@ function HelloMessage() {
     fetch("http://127.0.0.1:8000/hello/")
       .then((response) => response.json())
       .then((data) => {
-        console.log("sss",data);
         setMessage(data.message);
       })
       .catch((error) => {

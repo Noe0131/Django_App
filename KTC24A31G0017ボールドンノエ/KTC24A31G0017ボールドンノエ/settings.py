@@ -127,3 +127,14 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOW_ALL_ORIGINS = True
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'login',
+        'USER': 'root',
+        'PASSWORD': 'Fortnite31',
+        'HOST': 'localhost',  
+        'PORT': '3306',       
+    }
+}

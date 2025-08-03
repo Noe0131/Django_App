@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 import Cookies from 'js-cookie';
 
@@ -14,7 +14,6 @@ function Login() {
     const [email, setEmail] = useState<string>('');
     const [password, setPassword] = useState<string>('');
     const navigate = useNavigate();
-
     
     const handleLogin = async (error: React.FormEvent) => {
         error.preventDefault();
@@ -23,7 +22,6 @@ function Login() {
         try {
             const response = await fetch("http://localhost:8000/api/login/", {
                 method: "POST",
-                
                 headers: {
                     'Content-Type': 'application/json',
                     'X-CSRFToken': csrftoken,
@@ -44,7 +42,7 @@ function Login() {
             const data = await response.json();
             if (response.status === 200) {
                 console.log('Login successful:', data);
-                navigate('/'); 
+                navigate('/Home'); 
             }
         } catch (error) {
             console.error('Login failed:', error);
@@ -53,16 +51,10 @@ function Login() {
 
     return (
          <div className={styles.login_Container}>
+            <h1>TestoTrack</h1>
             <h2 className={styles.h2}>Login</h2>
             <form className={styles.senter} onSubmit={handleLogin}>
             {/* <form className={styles.senter}> */}
-                <input
-                    type="text"
-                    className='login-input'
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
-                    placeholder='Username'
-                />
                 <input
                     type="email"
                     className='login-input'
@@ -78,6 +70,9 @@ function Login() {
                     placeholder='Password'
                 />
                 <button type="submit">SUBMIT</button>
+                <Link to="/register">   
+                    <button>アカウント作成へ</button>
+                </Link>
             </form>
             {/* <LoginButton onClick={() => console.log("クリックされました")}/> */}
         </div>

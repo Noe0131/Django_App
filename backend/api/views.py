@@ -1,8 +1,7 @@
-from django.shortcuts import render
-from rest_framework.decorators import api_view
-from rest_framework.response import Response
+from django.http import JsonResponse
+from django.views.decorators.csrf import ensure_csrf_cookie
 
 # Create your views here.
-def hello(request):
-    return Response({"message: こん"})
-
+@ensure_csrf_cookie 
+def get_csrf_token(request):
+    return JsonResponse({'detail': 'CSRF cookie set'})

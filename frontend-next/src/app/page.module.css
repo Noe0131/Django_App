@@ -1,0 +1,32 @@
+/* スマートフォン（〜767px） */
+@media (max-width: 767px) {
+  .container {
+    max-width: 95%;    /* スマホはほぼ全幅 */
+    margin: 0 auto;
+  }
+}
+
+/* タブレット（768px〜1024px） */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    max-width: 720px;  /* iPadは720pxくらい */
+    margin: 0 auto;
+  }
+}
+
+/* PC（1025px〜1439px） */
+@media (min-width: 1025px) and (max-width: 1439px) {
+  .container {
+    max-width: 1200px; /* ノートPC〜一般PCは1200px */
+    margin: 0 auto;
+    padding: auto;
+  }
+}
+
+/* モニター（1440px〜） */
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1400px; /* 大画面は1400pxくらい */
+    margin: 0 auto;
+  }
+}

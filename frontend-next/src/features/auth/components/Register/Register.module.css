@@ -1,0 +1,57 @@
+.h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.senter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.label {
+    font-size: 0.8rem;
+}
+
+.Rigister_input {
+    padding: 10px 25px;
+    box-sizing: border-box;
+}
+
+.rigister_button {
+    padding: 10px 0;
+    font-size: 0.8rem;
+    cursor: pointer;
+    background-color: royalblue;
+    color: aliceblue;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+.p {
+    font-size: 0.7rem;
+}
+
+.login {
+    color: royalblue;
+}
+
+/* モバイル・タブレット（〜1023px） */
+@media (max-width: 1023px) {
+
+    .Rigister_input,
+    .rigister_button {
+        width: 200px;
+    }
+}
+
+/* PC（1024px〜） */
+@media (min-width: 1024px) {
+
+    .Rigister_input, .rigister_button {
+        width: 300px;
+    }
+}

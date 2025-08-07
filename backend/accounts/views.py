@@ -17,9 +17,14 @@ def Register_view(request):
     email = data.get('email')
     password = data.get('password')
 
+    if not username:
+        return JsonResponse({"message" : "usernameは必須です"},status=400)
+    if not email:
+        return JsonResponse({"message" : "emailは必須です"},status=400)
+    if not password:
+        return JsonResponse({"message" : "passwordは必須です"},status=400)
     if Register.objects.filter(username=username).exists():
         return JsonResponse({"message": "ユーザー名はすでにあります"}, status=400)
-
     account = Register.objects.create(
         username=username,
         email=email,

@@ -55,4 +55,5 @@ def login_view(request):
 def user_info(request):
     user = request.user
     return JsonResponse({"username": user.username, "email" : user.email, "password" : user.password }, status=200)
-    
+
+

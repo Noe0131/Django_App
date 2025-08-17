@@ -1,0 +1,16 @@
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.span {
+    font-weight: bold;
+    font-size: 2rem;
+    color: firebrick;
+}
+
+.image {
+    object-fit: cover;
+    display: blockc
+}

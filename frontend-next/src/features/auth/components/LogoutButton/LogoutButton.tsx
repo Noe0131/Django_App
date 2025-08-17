@@ -2,6 +2,8 @@
 
 import { useRouter } from "next/navigation";
 
+import Styles from "./LogoutButton.module.css";
+
 function Logout()  {
 
     const router = useRouter();
@@ -14,8 +16,8 @@ function Logout()  {
         console.log("ログアウト実行中");
     }
     return (
-        <div>
-            <button onClick={handleLogout}>ログアウト</button>
+        <div className={Styles.div}>
+            <button className={Styles.button}  onClick={handleLogout}>ログアウト</button>
         </div>
     )
 

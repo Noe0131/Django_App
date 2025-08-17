@@ -20,7 +20,7 @@ function Register() {
 
         const csrftoken = Cookies.get("csrftoken") || '';
         try {
-            const response = await fetch("http://localhost:8000/api/register/", {
+            const response = await fetch("http://localhost:8000/accounts/register/", {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',

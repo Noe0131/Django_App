@@ -1,0 +1,22 @@
+.user {
+    position: relative;
+    background-color: #ffff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.user::before {
+    content: "";
+    position: absolute;
+    top: -2px; left: -2px; right: -2px; bottom: -2px;
+    border-radius: 50%;
+    background: linear-gradient(to right, #3366FF, #009999);
+    z-index: -1;
+}
+

@@ -1,32 +1,28 @@
-/* スマートフォン（〜767px） */
-@media (max-width: 767px) {
-  .container {
-    max-width: 95%;    /* スマホはほぼ全幅 */
-    margin: 0 auto;
-  }
+/* ベース（モバイルファースト） */
+.container {
+  width: 100%;
+  max-width: 95%;      /* スマホはほぼ全幅 */
+  margin: 0 auto;
+  padding: 0 1rem;     /* 画面端にくっつかないように */
 }
 
 /* タブレット（768px〜1024px） */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) {
   .container {
-    max-width: 720px;  /* iPadは720pxくらい */
-    margin: 0 auto;
+    max-width: 720px;  /* iPad〜小さいタブレット */
   }
 }
 
-/* PC（1025px〜1439px） */
-@media (min-width: 1025px) and (max-width: 1439px) {
+/* ノートPC（1025px〜1439px） */
+@media (min-width: 1025px) {
   .container {
-    max-width: 1200px; /* ノートPC〜一般PCは1200px */
-    margin: 0 auto;
-    padding: auto;
+    max-width: 1200px; /* 一般的なノートPCやデスクトップ */
   }
 }
 
-/* モニター（1440px〜） */
+/* 大画面モニター（1440px〜） */
 @media (min-width: 1440px) {
   .container {
-    max-width: 1400px; /* 大画面は1400pxくらい */
-    margin: 0 auto;
+    max-width: 1400px; /* 広めのディスプレイ */
   }
 }

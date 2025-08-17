@@ -5,5 +5,6 @@ from django.contrib import admin;
 urlpatterns = [
     path('admin/', admin.site.urls), 
     path('api/', include('api.urls')),
-    path('api/' , include("accounts.urls"))
+    path('accounts/' , include("accounts.urls")),
+    path('product/', include('product.urls')),
 ]

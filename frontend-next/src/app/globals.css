@@ -40,3 +40,32 @@ a {
     color-scheme: dark;
   }
 }
+
+/* ベース（モバイルファースト） */
+.container {
+  width: 100%;
+  max-width: 95%;      /* スマホはほぼ全幅 */
+  margin: 0 auto;
+  padding: 0 1rem;     /* 画面端にくっつかないように */
+}
+
+/* タブレット（768px〜1024px） */
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;  /* iPad〜小さいタブレット */
+  }
+}
+
+/* ノートPC（1025px〜1439px） */
+@media (min-width: 1025px) {
+  .container {
+    max-width: 1200px; /* 一般的なノートPCやデスクトップ */
+  }
+}
+
+/* 大画面モニター（1440px〜） */
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1400px; /* 広めのディスプレイ */
+  }
+}

@@ -23,7 +23,7 @@ function Login() {
         
         const csrftoken = Cookies.get("csrftoken") || '';
         try {
-            const response = await fetch("http://localhost:8000/api/login/", {
+            const response = await fetch("http://localhost:8000/accounts/login/", {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',
